@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>All Samples</key>
+	<array>
+		<dict>
+			<key>LogType</key>
+			<string>Debug</string>
+			<key>Message</key>
+			<string>Load button1</string>
+			<key>Timestamp</key>
+			<date>2013-10-22T10:01:02Z</date>
+			<key>Type</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>LogType</key>
+			<string>Fail</string>
+			<key>Message</key>
+			<string>Element "button1" failed to become valid within 15 seconds.</string>
+			<key>Screenshot</key>
+			<string>4637A19F-4EAA-43AF-A0B4-EA33466E6D5E</string>
+			<key>Timestamp</key>
+			<date>2013-10-22T10:01:17Z</date>
+			<key>Type</key>
+			<integer>7</integer>
+		</dict>
+		<dict>
+			<key>LogType</key>
+			<string>Fail</string>
+			<key>Message</key>
+			<string>View download screen from service summary</string>
+			<key>Screenshot</key>
+			<string>932C07F9-E73E-4C17-801D-AFCACD8FC870</string>
+			<key>Timestamp</key>
+			<date>2013-10-22T10:01:17Z</date>
+			<key>Type</key>
+			<integer>7</integer>
+		</dict>
+		<dict>
+			<key>LogType</key>
+			<string>Debug</string>
+			<key>Message</key>
+			<string>\n&lt;?xml version="1.0" encoding="UTF-8" ?&gt;\n&lt;testsuites&gt;\n&lt;testsuite name="Stay Connected feature" errors="0" tests="1" failures="1" time="14.671" timestamp="2013-10-22T18:01:02"&gt;\n  &lt;testcase classname="Stay Connected feature" name="View download screen from service summary" time="14.655"&gt;&lt;failure&gt;1: Element &amp;quot;button1&amp;quot; failed to become valid within 15 seconds.&lt;/failure&gt;&lt;/testcase&gt;\n&lt;/testsuite&gt;\n&lt;/testsuites&gt;</string>
+			<key>Timestamp</key>
+			<date>2013-10-22T10:01:17Z</date>
+			<key>Type</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>
