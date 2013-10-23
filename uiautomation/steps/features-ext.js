@@ -10,8 +10,8 @@ $.extend($, {
 
 		$.debug("Load " + name);
 		for (var i = maxRetry; i > 0; i--) {			
-			// var elements = $('window').find(name);
-			var elements = UIATarget.localTarget().frontMostApp().mainWindow().elements()[name];	
+			var elements = $('window').find(name);
+			// var elements = UIATarget.localTarget().frontMostApp().mainWindow().elements()[name];	
 			if (elements.length > 0) {
 				break;
 			} else if (i == 1) {

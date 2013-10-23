@@ -2,9 +2,14 @@ describe("Stay Connected feature", function() {
 
     it("View download screen from service summary", function() {
         //...touching_support.rb                
-        $.waitUntilFound('button1', 15) 
         
+        $.waitUntilFound('button[name=button1]', 15) 
+        
+        UIATarget.localTarget().logElementTree()
         steps.touch('button[name=button1]')
+        
+        // UIATarget.localTarget().frontMostApp().mainWindow().elements()["button1"]
+        
         steps.touch('text[name=1stView]')
         UIATarget.localTarget().logElementTree()
         UIATarget.localTarget().frontMostApp().mainWindow().elements()["anyView"].tap()

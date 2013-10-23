@@ -1,6 +1,6 @@
 
 <testsuites>
-<testsuite name="Stay Connected feature" errors="0" tests="1" failures="1" time="14.671" timestamp="2013-10-22T18:01:02">
-  <testcase classname="Stay Connected feature" name="View download screen from service summary" time="14.655"><failure>1: Element &amp;quot;button1&amp;quot; failed to become valid within 15 seconds.</failure></testcase>
+<testsuite name="Stay Connected feature" errors="0" tests="1" failures="0" time="3.002" timestamp="2013-10-23T17:44:17">
+  <testcase classname="Stay Connected feature" name="View download screen from service summary" time="3"></testcase>
 </testsuite>
 </testsuites>
