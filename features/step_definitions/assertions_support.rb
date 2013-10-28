@@ -1,38 +1,49 @@
 # encoding: utf-8
 require 'calabash-android/calabash_steps'
 
-Then /^我应该会看到"([^\"]*)"$/ do |identifier|
-  custom_step(
-    %Q|I should see \"#{identifier}\"|,
-    %Q|测试失败: 文案 '#{identifier}' 没有找到|
-  )
-end
+Then /^我应该会看到"([^\"]*)"$/ do |identifier|  
+  "
+  var staticTexts = UIATarget.localTarget().frontMostApp().mainWindow().staticTexts()
+  var textFields = UIATarget.localTarget().frontMostApp().mainWindow().textFields()
 
-Then /^我看到"([^\"]*)"$/ do |identifier|
-  custom_step(
-    %Q|I should see \"#{identifier}\"|,
-    %Q|测试失败: 文案 '#{identifier}' 没有找到|
-  )
+  var searchFields = textFields.toArray().concat(staticTexts.toArray());
+  var fullTextSearchResult;
+  for(var i =0; i<searchFields.length; i++){            
+      if (searchFields[i].value() == #{identifier}) {fullTextSearchResult = true; break}
+  }
+
+  expect(fullTextSearchResult).toEqual(true)   
+  "   
 end
 
 Then /^我应该会看到文本里包含"([^\"]*)"$/ do |identifier|
-  custom_step(
-    %Q|I should see text containing \"#{identifier}\"|,
-    %Q|测试失败: 文案 '#{identifier}' 没有找到|
-  )
+  "
+  var staticTexts = UIATarget.localTarget().frontMostApp().mainWindow().staticTexts()
+  var textFields = UIATarget.localTarget().frontMostApp().mainWindow().textFields()
+
+  var searchFields = textFields.toArray().concat(staticTexts.toArray());
+  var fullTextSearchResult;
+  for(var i =0; i<searchFields.length; i++){            
+     if (searchFields[i].value().indexOf(#{identifier}) !=-1 ) {fullTextSearchResult = true; break}
+  }
+
+  expect(fullTextSearchResult).toEqual(true)   
+  "   
 end
 
 Then /^我应该不会看到"([^\"]*)"$/ do |identifier|
-  custom_step(
-    %Q|I should not see \"#{identifier}\"|,
-    %Q|测试失败: 文案 '#{identifier}' 没有找到|
-  )
+  "
+  var staticTexts = UIATarget.localTarget().frontMostApp().mainWindow().staticTexts()
+  var textFields = UIATarget.localTarget().frontMostApp().mainWindow().textFields()
+
+  var searchFields = textFields.toArray().concat(staticTexts.toArray());
+  var fullTextSearchResult = false;
+  for(var i =0; i<searchFields.length; i++){            
+      if (searchFields[i].value() == #{identifier}) {fullTextSearchResult = true; break}
+  }
+
+  expect(fullTextSearchResult).toEqual(false)   
+  "   
 end
 
-Then /^我不会看到"([^\"]*)"$/ do |identifier|
-  custom_step(
-    %Q|I should not see \"#{identifier}\"|,
-    %Q|测试失败: 文案 '#{identifier}' 没有找到|
-  )
-end
 

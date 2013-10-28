@@ -1,6 +1,11 @@
 
 <testsuites>
-<testsuite name="Stay Connected feature" errors="0" tests="1" failures="0" time="3.002" timestamp="2013-10-23T17:44:17">
-  <testcase classname="Stay Connected feature" name="View download screen from service summary" time="3"></testcase>
+<testsuite name="Stay Connected feature" errors="0" tests="1" failures="0" time="1.015" timestamp="2013-10-28T14:05:58">
+  <testcase classname="Stay Connected feature" name="View download screen from service summary" time="1.014"></testcase>
+</testsuite>
+<testsuite name="Element assertion feature" errors="0" tests="1" failures="0" time="0.001" timestamp="2013-10-28T14:05:59">
+  <testcase classname="Element assertion feature" name="Element visible" time="0"></testcase>
+</testsuite>
+<testsuite name="Navigation Support feature" errors="0" tests="0" failures="0" time="0" timestamp="2013-10-28T14:05:59">
 </testsuite>
 </testsuites>

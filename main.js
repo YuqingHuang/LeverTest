@@ -14,6 +14,8 @@
 #import "uiautomation/steps/features-ext.js"
 #import "uiautomation/steps/touching_support.js"
 #import "features/demo.js"
+#import "features/demo_assertion.js"
+#import "features/demo_navigation.js"
 // Setup and run
 jasmine.getEnv().addReporter(new jasmine.JUnitXmlReporter());
 jasmine.getEnv().execute();

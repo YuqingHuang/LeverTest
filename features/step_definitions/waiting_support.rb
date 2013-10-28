@@ -17,8 +17,7 @@ Then /^我用最多"(\d+)"秒等待文本"([^\"]*)"显示出来$/ do |seconds, t
 end
 
 Then /^我等待标识为"([^\"]*)"的视图显示出来$/ do |identifier|
-  "$.waitUntilFound('view[name=#{identifier}]')"
-  # does not work
+  "$.waitUntilFound('view[name=#{identifier}]')"  
 end
 
 Then /^我等了"(\d+)"秒$/ do |seconds|

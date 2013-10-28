@@ -100,6 +100,10 @@ $.extend($, {
 		}
 		return elements;
 	}
+	// ,
+	// fullTextSearch: function(text,errorMsg) {
+	// 	var
+	// }
 });
 
 var steps ={
